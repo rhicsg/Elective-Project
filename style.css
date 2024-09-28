@@ -1,89 +1,125 @@
-body{
-    background-image: url("PHOTOS/BackGround\ 1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+*{
+    margin: 0;
+    padding: 0;
 }
+
 h1{
-    color: rgb(60, 179, 113), blue;
+    color: #fff;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 100px;
-}.header {
-    overflow: hidden;
-    background-color: #24106b;
-    /*padding: 20px 10px;*/
-  }
-  
-  .header img{
-    height: 50px;
-    width: 50px;
-  }
-  
-  
-  /* Style the header links */
-  .header a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-  }
-  
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-  .header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Change the background color on mouse-over */
-  .header a:hover {
-    background-color: rgb(#24106b);
-    color: White;
-  }
-  
-  .header a.active {
-    background-color: rgb(#ffffff);
-    color: white;
-  }
-  
-  /* Float the link section to the right */
-  .header-Right {
-    float: right;
-  }
+    font-size: 50px;
+}
 
-  .footer{
-    position:fixed;
-    left: 0;
-    bottom: 0;
+p{
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 35px;
+}
+.main{
     width: 100%;
-    background-color: rgb(153, 245, 125);
-    color: rgb(13, 151, 75);
-    text-align: center;
-  }
-  #content{
-    color: maroon;
-    text-align: justify;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 75px;
-  }
-.product p {
-    margin: 5px 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgba(0, 0, 0, 0.5)50%), url(shoe.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
 }
 
-.button {
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    
+
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4 ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 300px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
     padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 
+}
 
+.btn:focus{
+    outline: none;
+
+}
+
+.srch:focus{
+    outline: none;
+}

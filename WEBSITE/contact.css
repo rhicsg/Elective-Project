@@ -7,13 +7,16 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100%;
-    height: 100vh;
+html, body {
+    height: 100%; /* Ensure full height for both body and html */
+    margin: 0;
     overflow-x: hidden;
     background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column; /* Stack content and footer vertically */
 }
 
+/* NAVIGATION */
 nav {
     width: 100%;
     height: 10vh;
@@ -105,107 +108,188 @@ nav {
     color: #f74f10;
 }
 
+/* SECTION (Main Content) */
 section {
     display: flex;
-    justify-content: center;
-    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #000000;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    flex-grow: 1; /* Ensure section takes available space */
 }
 
+/* Contact form styling */
 .content {
-    flex: 1;
-    text-align: left; 
-    color: white;
-    margin-top: 15%;
-    margin-left: 10%;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px; /* Space for the contact list */
 }
 
-.maincontent h1 {
-    color: #f74f10;
+.maincontent h2 {
+    font-size: 2.5em;
+    color: #FF6F00; 
+    margin-bottom: 20px;
 }
 
 .maincontent p {
-    font-size: 18px;
-    line-height: 2;
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 30px;
 }
 
-.image-container {
-    display: flex; 
-    justify-content: flex-end; 
-    align-items: center; 
-    margin-top: 10px;
-    margin-right: 10%;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #000000;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.image {
-    min-width: 200px; 
-    filter: drop-shadow(-10px -10px 200px #f74f10); 
+.contact-form label {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #ffffff; /* Set label color to white */
 }
 
-.image img {
-    max-width: 400px;     
-    height: auto; 
-}
 
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #FF6F00;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #FF6F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+/* Styling for the contact-info list */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap; 
+}
+
+.contact-info li {
+    font-size: 1.2em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    font-size: 1.5em;
+    color: #FF6F00;
+    overflow: visible; /* Ensure that items are not clipped */
+}
+
+.contact-info a {
+    color: #FF6F00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info li:hover {
+    transform: translateY(-3px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Footer */
+footer {
     background-color: rgb(0, 0, 0);
     color: #f74f10;
     text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px; /* Space between the content and footer */
 }
 
 .social-media {
     margin-top: 10px;
 }
-    
+
 .social-media a {
     margin: 0 10px;
-    color: #ffffff; 
+    color: #ffffff;
     text-decoration: none;
-    font-size: 20px; 
+    font-size: 20px;
 }
-    
+
 .social-media a:hover {
-    color: #f74f10; 
+    color: #f74f10;
 }
 
 /* Dropdown styles */
 .links {
     display: flex;
-    align-items: center; 
-    position: relative; 
+    align-items: center;
+    position: relative;
 }
-    
+
 .dropdown {
-    position: relative; 
-    margin: 0 20px; 
+    position: relative;
+    margin: 0 20px;
 }
-    
+
 .sub-menu {
-    display: none; 
-    position: absolute; 
-    top: 100%; 
-    left: 0;         
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     border-radius: 5px;
-    z-index: 1; 
+    z-index: 1;
 }
-    
+
 .dropdown:hover .sub-menu {
-    display: block; 
+    display: block;
 }
-    
+
 .sub-menu ul {
-    list-style: none; 
-    padding: 10px 0; 
-    margin: 0; 
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
 }
-    
+
 .sub-menu li {
-    padding: 5px 15px; 
+    padding: 5px 15px;
 }
-
-
-
-
